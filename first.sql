@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS college;
+DROP DATABASE IF EXISTS college;
+CREATE DATABASE IF NOT EXISTS college;
+CREATE TABLE Employee(
+		id INT PRIMARY KEY,
+        name VARCHAR(50),
+        age INT NOT NULL
+);
+
+INSERT INTO Employee VALUES(1,"Anjali",20);
+INSERT INTO Employee VALUES(2,"Abhiraj",23student);
+SELECT* FROM Employee;
+
+SHOW DATABASES;
