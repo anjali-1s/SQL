@@ -46,3 +46,46 @@ FROM student
 GROUP BY city
 ORDER BY avg(marks) DESC;
 
+SELECT grade,COUNT(grade)
+FROM student 
+GROUP BY grade
+ORDER BY grade;
+
+SELECT city ,count(rollno)
+FROM student 
+GROUP BY city
+HAVING MAX(marks) > 90;
+
+SELECT city
+FROM student 
+WHERE grade = "A"
+GROUP BY city
+HAVING MAX(marks) > 90
+ORDER BY city DESC;
+
+SET SQL_SAFE_UPDATEs = 0;
+
+UPDATE student 
+SET grade = "O"
+WHERE grade = "A";
+
+SELECT * FROM student;
+
+UPDATE student 
+SET marks = 90
+WHERE rollno = 101;
+
+UPDATE student 
+SET grade =  "B"
+WHERE marks BETWEEN 80 AND 90;
+
+UPDATE student 
+SET marks = marks + 1;
+SELECT * FROM student;
+
+DELETE FROM student
+WHERE marks > 33;
+
+DELETE FROM student;
+
+SELECT * FROM student;
